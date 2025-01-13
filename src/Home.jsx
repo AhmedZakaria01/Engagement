@@ -3,6 +3,7 @@ import "./Home.css"; // Your styles
 import OpenGoogleMaps from "./components/Location";
 import FireworksComponent from "./components/FireworksComponent";
 import FormModal from "./components/FormModal";
+import { Toaster } from "react-hot-toast";
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -24,6 +25,7 @@ function Home() {
 
   return (
     <div className="header">
+      <Toaster position="top-center"  reverseOrder={false} />
       <OpenGoogleMaps />
       <FireworksComponent />
       <button

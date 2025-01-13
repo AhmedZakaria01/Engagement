@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import supabase from "../supabase";
+import toast from "react-hot-toast";
 
 const FormModal = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -36,20 +37,27 @@ const FormModal = ({ onClose }) => {
       console.log("Data inserted successfully:", insertedData);
       setFormData({ name: "", to: "", message: "" }); // Reset form data
       onClose(); // Close the form
-      // Optionally, you can fetch messages again after submission
+
+      toast.success(
+        `Your message has been sent successfully
+        We're glad to hear from you! ♥ `,
+        {
+          duration: 7000,
+        }
+      );
     }
   };
 
   return (
-    <div className="bg-violet-300/90 p-6 rounded-md shadow-md w-80">
+    <div className=" bg-gradient-to-b from-[#dbacac] to-[#c06e6e] p-6 rounded-md shadow-md w-80">
       <h2 className="text-l text-center font-semibold mb-4">
-        Kindly leave us a message ♥
+        kindly leave us a message ♥
       </h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-black"
           >
             Name
           </label>
@@ -65,10 +73,7 @@ const FormModal = ({ onClose }) => {
           />
         </div>
         <div className="mb-4">
-          <label
-            htmlFor="to"
-            className="block text-sm font-medium text-gray-700"
-          >
+          <label htmlFor="to" className="block text-sm font-medium text-black">
             To
           </label>
           <select
@@ -97,7 +102,7 @@ const FormModal = ({ onClose }) => {
         <div className="mb-4">
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-black"
           >
             Message
           </label>
@@ -113,14 +118,13 @@ const FormModal = ({ onClose }) => {
         </div>
         <span className="text-[12px] text-gray-700 mb-4 block text-center">
           Messages Are Private and Secured ,<br /> Only
-          <strong className="text-violet-600"> Ahmed</strong> and
-          <strong className="text-violet-600"> Sahar</strong> can access the
-          messages.
+          <span> Ahmed</span> and
+          <span> Sahar</span> can access the messages.
         </span>
         <div className="flex justify-between">
           <button
             type="submit"
-            className="px-3 py-1 bg-violet-700 text-white text-sm rounded-md hover:bg-violet-600 transition-all"
+            className="px-3 py-1 bg-[#ce5b5b] text-[#ddd] text-sm rounded-md hover:bg-[#c06565] transition-all"
           >
             Send ♥
           </button>
