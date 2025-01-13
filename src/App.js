@@ -16,9 +16,9 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             {/* Child routes (relative paths) */}
             <Route index element={<Home />} />
-            <Route path="private-login-boyka-fulla" element={<Login />} />
+            <Route path="/private-login-boyka-fulla" element={<Login />} />
             <Route
-              path="messageViewer"
+              path="/messageViewer"
               element={
                 <ProtectRouter>
                   <MessagesViewer />
@@ -31,3 +31,5 @@ export default function App() {
     </>
   );
 }
+
+ 

@@ -2,7 +2,7 @@
   "homepage": "https://AhmedZakaria01.github.io/Engagement",
   "name": "my-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@fireworks-js/react": "^2.10.8",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
