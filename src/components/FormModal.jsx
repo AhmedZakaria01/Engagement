@@ -124,7 +124,7 @@ const FormModal = ({ onClose }) => {
         <div className="flex justify-between">
           <button
             type="submit"
-            className="px-3 py-1 bg-[#ce5b5b] text-[#ddd] text-sm rounded-md hover:bg-[#c06565] transition-all"
+            className="px-3 py-1 bg-[#b43f3f] text-[#ddd] text-sm rounded-md hover:bg-[#c06565] transition-all"
           >
             Send ♥
           </button>
