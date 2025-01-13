@@ -24,7 +24,7 @@ export default function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/Engagement">
         <Routes>
           <Route path="Engagement" element={<Home />} />
           <Route path="/private-login-boyka-fulla" element={<Login />} />
