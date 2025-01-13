@@ -8,23 +8,9 @@ import MessagesViewer from "./components/MessagesViewer";
 import ProtectRouter from "./components/ProtectRouter";
 
 export default function App() {
-  // const ref = useRef(null);
-
-  // const fireworkSound = new Audio("path_to_sound_file.mp3"); // Path to your sound file
-
-  // const toggle = () => {
-  //   if (!ref.current) return;
-  //   if (ref.current.isRunning) {
-  //     ref.current.stop();
-  //   } else {
-  //     ref.current.start();
-  //     fireworkSound.play(); // Play the sound when fireworks start
-  //   }
-  // };
-
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/Engagement">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/private-login-boyka-fulla" element={<Login />} />
