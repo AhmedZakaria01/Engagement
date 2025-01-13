@@ -9,16 +9,16 @@ import Layout from "./components/Layout"; // Assuming Layout is your parent comp
 export default function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/Engagement">
         {/* Set basename for GH Pages */}
         <Routes>
           {/* Parent route (Layout) */}
-          <Route path="/Engagement" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
             {/* Child routes (relative paths) */}
-            <Route path="/Engagement" index element={<Home />} />
-            <Route path="/Engagement/private-login" element={<Login />} />
+            <Route index element={<Home />} />
+            <Route path="/private-login" element={<Login />} />
             <Route
-              path="/Engagement/messageViewer"
+              path="/messageViewer"
               element={
                 <ProtectRouter>
                   <MessagesViewer />
@@ -31,5 +31,3 @@ export default function App() {
     </>
   );
 }
-
- 
