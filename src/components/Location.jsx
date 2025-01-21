@@ -9,11 +9,8 @@ const OpenGoogleMaps = () => {
   // Function to open Google Maps with the specified location
   const openGoogleMaps = () => {
     // Encode the address to make it URL-safe
-    const encodedAddress = encodeURIComponent(
-      "Nile Corniche, Helwan El-Balad, El Masara, Cairo Governorate 4040001"
-    );
 
-    const googleMapsUrl = `https://www.google.com/maps?q=${encodedAddress}`;
+    const googleMapsUrl = `https://maps.app.goo.gl/vCita2ihcjAF7dix9`;
     window.open(googleMapsUrl);
   };
 
